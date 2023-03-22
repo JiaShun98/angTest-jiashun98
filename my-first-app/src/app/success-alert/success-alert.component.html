@@ -1,0 +1,45 @@
+<label>Server Name</label><br />
+
+<label>One way bidding</label><br />
+<input
+  type="text"
+  class="form-control"
+  (input)="onUpdateServerName($event)"
+/><br /><br />
+
+<label>Two way bidding for serverName</label><br />
+<input type="text" class="form-control" [(ngModel)]="serverName" /><br />
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()"
+>
+  Add server
+</button>
+<br />
+<!-- <p [innerText]="allowNewServer"></p> -->
+
+<!-- <p [ngStyle]="{backgroundColor : getColor()}" *ngIf="!serverCreated"
+    >{{ serverCreationStatus }}</p><br/> -->
+
+<p *ngFor="let server of serverArr" [ngStyle]="{ backgroundColor: getColor() }">
+  {{ server }}
+</p><br />
+
+<!-- <ng-template #noServer>
+  <p>No server created !</p>
+</ng-template>  for else ngIf-->
+
+<hr />
+<label>UserName</label> <br />
+<input type="text" class="form-control" [(ngModel)]="userName" /><br />
+<p>{{ userName }}</p>
+<br />
+<button
+  class="btn btn-primary"
+  [disabled]="userName === ''"
+  (click)="onResetUserName()"
+>
+  Reset UserName
+</button>
+

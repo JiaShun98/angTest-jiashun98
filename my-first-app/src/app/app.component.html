@@ -1,0 +1,28 @@
+<app-header></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <!-- <app-recipes *ngIf="loadFeature === 'recipe'"></app-recipes>
+      <app-shopping-list *ngIf="loadFeature === 'shopping-list'"></app-shopping-list> -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>My Servers</h2>
+      <button class="btn btn-primary" (click)="onAddServer()">Add Server</button>
+      <br><br>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let server of servers; let i = index"
+          (click)="onRemoveServer(i)">{{ server }}</li>
+      </ul>
+    </div>
+  </div>
+</div> -->
+
